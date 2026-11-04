@@ -1,0 +1,33 @@
+# Ficheros de entorno con contraseñas y tokens
+.env
+*.env
+.env.*
+
+# Sesiones de Telegram (ACCESO CRÍTICO)
+*.session
+*.session-journal
+data/*.session*
+
+# Estados y cachés locales del servidor
+data/
+*.json
+*.tmp
+*.bak
+liberables.txt
+pendientes*.txt
+
+# Temporales y empaquetados
+/tmp/
+*.7z*
+*.jpg
+*.png
+*.log
+
+# Entornos y caches de Python / OS
+__pycache__/
+*.py[cod]
+.DS_Store
+@eaDir
+*.bak*
+*.bak*
+docker-compose.override.yml

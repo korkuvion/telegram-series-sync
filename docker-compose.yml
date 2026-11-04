@@ -1,0 +1,14 @@
+services:
+  telegram-sync:
+    container_name: telegram_series_sync
+    image: korkuvion/telegram-uploader:latest
+    restart: unless-stopped
+    stop_grace_period: 30m
+    stdin_open: true
+    tty: true
+    env_file:
+      - .env
+    volumes:
+      - ${DATA_PATH:-./data}:/data
+      - ${MEDIA_PATH:-/media}:/media:ro
+      - ${TEMP_PATH:-/tmp/splits}:/tmp/splits
